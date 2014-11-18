@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LOGO hardware="Logo8UDF">
+  <Properties>
+    <Creator>Ragamuffin85</Creator>
+    <Projectname></Projectname>
+    <Installationname></Installationname>
+    <Customer></Customer>
+    <Diagramno></Diagramno>
+    <Checked></Checked>
+    <Company></Company>
+    <Version>1.0.5</Version>
+    <Show>true</Show>
+    <Comments></Comments>
+    <Horizontal>1</Horizontal>
+    <Vertical>1</Vertical>
+    <History>
+      <DisplayedHistory>
+        <Date>1415991329284</Date>
+        <User>Ragamuffin85</User>
+        <Version>V8.0.0</Version>
+        <Comments></Comments>
+        <Saved>false</Saved>
+      </DisplayedHistory>
+      <DeletedHistory/>
+    </History>
+    <Zoom>100</Zoom>
+    <PageFormat>
+      <Margin>
+        <Left>28.0</Left>
+        <Top>28.0</Top>
+      </Margin>
+      <Imagesize>
+        <Height>785.0</Height>
+        <Width>538.0</Width>
+      </Imagesize>
+      <Paper>
+        <Height>842.0</Height>
+        <Width>595.0</Width>
+      </Paper>
+      <Orientation>0</Orientation>
+    </PageFormat>
+    <Password>03F58F63BB4C9DC3EDEFA8B5B6F36E2D6FF7DBED657A4DD1</Password>
+  </Properties>
+  <UDFBlock guidValue="141634505643729" identifier="Raffstor" comments="" version="1.0.5" blockNumber="0" inCounter="3" outCounter="2" validity="0">
+    <GuidList>
+      <Guid value="1415994413050" version="1.0.0"/>
+      <Guid value="141599472889084" version="1.0.1"/>
+      <Guid value="141599575124581" version="1.0.2"/>
+      <Guid value="141634410797243" version="1.0.3"/>
+      <Guid value="141634472486065" version="1.0.4"/>
+      <Guid value="141634505643729" version="1.0.5"/>
+    </GuidList>
+    <Parameter/>
+    <Blocks>
+      <Block opcode="50" blockNumber="1" name="">
+        <InConnector negate="false" opcode="16777216" blockNumber="1" index="0"/>
+        <InConnector negate="false" opcode="16777216" blockNumber="2" index="1"/>
+        <Parameter index="2">
+          <Protection>false</Protection>
+          <TH isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</TH>
+          <TL isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16584</TL>
+          <T_ isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</T_>
+          <T_L isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</T_L>
+          <Rem>false</Rem>
+        </Parameter>
+      </Block>
+      <Block opcode="34" blockNumber="2" name="">
+        <InConnector negate="false" opcode="16777216" blockNumber="1" index="0"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="1"/>
+        <Parameter index="2">
+          <Protection>false</Protection>
+          <T isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">19384</T>
+          <Rem>false</Rem>
+        </Parameter>
+      </Block>
+      <Block opcode="1" blockNumber="3" name="">
+        <InConnector negate="false" opcode="50" blockNumber="1" index="0"/>
+        <InConnector negate="false" opcode="34" blockNumber="2" index="1"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="2"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="3"/>
+      </Block>
+      <Block opcode="50" blockNumber="4" name="">
+        <InConnector negate="false" opcode="16777216" blockNumber="2" index="0"/>
+        <InConnector negate="false" opcode="16777216" blockNumber="1" index="1"/>
+        <Parameter index="2">
+          <Protection>false</Protection>
+          <TH isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</TH>
+          <TL isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16584</TL>
+          <T_ isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</T_>
+          <T_L isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16384</T_L>
+          <Rem>false</Rem>
+        </Parameter>
+      </Block>
+      <Block opcode="34" blockNumber="5" name="">
+        <InConnector negate="false" opcode="16777216" blockNumber="2" index="0"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="1"/>
+        <Parameter index="2">
+          <Protection>false</Protection>
+          <T isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">19384</T>
+          <Rem>false</Rem>
+        </Parameter>
+      </Block>
+      <Block opcode="1" blockNumber="6" name="">
+        <InConnector negate="false" opcode="50" blockNumber="4" index="0"/>
+        <InConnector negate="false" opcode="34" blockNumber="5" index="1"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="2"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="3"/>
+      </Block>
+      <Block opcode="1" blockNumber="7">
+        <InConnector negate="false" opcode="1" blockNumber="3" index="0"/>
+        <InConnector negate="true" opcode="1" blockNumber="6" index="1"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="2"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="3"/>
+      </Block>
+      <Block opcode="1" blockNumber="8">
+        <InConnector negate="true" opcode="1" blockNumber="3" index="0"/>
+        <InConnector negate="false" opcode="1" blockNumber="6" index="1"/>
+        <InConnector negate="true" opcode="16777216" blockNumber="3" index="2"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="3"/>
+      </Block>
+      <Block opcode="2" blockNumber="9">
+        <InConnector negate="false" opcode="1" blockNumber="7" index="0"/>
+        <InConnector negate="false" opcode="16777216" blockNumber="3" index="1"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="2"/>
+        <InConnector negate="false" opcode="255" blockNumber="-1" index="3"/>
+      </Block>
+      <InGroup>
+        <Block opcode="16777216" blockNumber="1" name="Auf"/>
+        <Block opcode="16777216" blockNumber="2" name="Ab"/>
+        <Block opcode="16777216" blockNumber="3" name="Windwächter"/>
+      </InGroup>
+      <OutGroup>
+        <Block opcode="16777280" blockNumber="2" name="Auf">
+          <InConnector negate="false" opcode="2" blockNumber="9" index="0"/>
+        </Block>
+        <Block opcode="16777280" blockNumber="1" name="Ab">
+          <InConnector negate="false" opcode="1" blockNumber="8" index="0"/>
+        </Block>
+      </OutGroup>
+    </Blocks>
+  </UDFBlock>
+  <Figures>
+    <Figure type="5" position="712,79">
+      <Content type="Arial unicode" style="0" size="12" color="-16777216"></Content>
+    </Figure>
+    <Figure type="0" area="90,147,498.0,628.0">
+      <InGroup>
+        <Figure type="1" opcode="16777216" blockNumber="1" position="84,183"/>
+        <Figure type="1" opcode="16777216" blockNumber="2" position="84,410"/>
+        <Figure type="1" opcode="16777216" blockNumber="3" position="84,693"/>
+      </InGroup>
+      <OutGroup>
+        <Figure type="1" opcode="16777280" blockNumber="2" position="582,213"/>
+        <Figure type="1" opcode="16777280" blockNumber="1" position="582,427"/>
+      </OutGroup>
+    </Figure>
+    <Figure type="1" opcode="50" blockNumber="1" position="226,183" boxShowState="true"/>
+    <Figure type="1" opcode="34" blockNumber="2" position="226,313" boxShowState="true"/>
+    <Figure type="1" opcode="1" blockNumber="3" position="386,183"/>
+    <Figure type="1" opcode="50" blockNumber="4" position="196,403" boxShowState="true"/>
+    <Figure type="1" opcode="34" blockNumber="5" position="196,543" boxShowState="true"/>
+    <Figure type="1" opcode="1" blockNumber="6" position="386,413"/>
+    <Figure type="1" opcode="1" blockNumber="7" position="466,193"/>
+    <Figure type="1" opcode="1" blockNumber="8" position="526,413"/>
+    <Figure type="2">
+      <Connector index="0" opcode="50" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="1" blockNumber="3" direction="1" type="0"/>
+      <Points>
+        <Point x="257" y="198"/>
+        <Point x="368" y="198"/>
+        <Point x="368" y="188"/>
+        <Point x="380" y="188"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="34" blockNumber="2" direction="0" type="0"/>
+      <Connector index="1" opcode="1" blockNumber="3" direction="1" type="0"/>
+      <Points>
+        <Point x="257" y="328"/>
+        <Point x="368" y="328"/>
+        <Point x="368" y="198"/>
+        <Point x="380" y="198"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="50" blockNumber="4" direction="0" type="0"/>
+      <Connector index="0" opcode="1" blockNumber="6" direction="1" type="0"/>
+      <Points>
+        <Point x="227" y="418"/>
+        <Point x="378" y="418"/>
+        <Point x="378" y="418"/>
+        <Point x="380" y="418"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="34" blockNumber="5" direction="0" type="0"/>
+      <Connector index="1" opcode="1" blockNumber="6" direction="1" type="0"/>
+      <Points>
+        <Point x="227" y="558"/>
+        <Point x="360" y="558"/>
+        <Point x="360" y="428"/>
+        <Point x="380" y="428"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="2" direction="0" type="0"/>
+      <Connector index="0" opcode="50" blockNumber="4" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="413"/>
+        <Point x="150" y="413"/>
+        <Point x="150" y="408"/>
+        <Point x="190" y="408"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="2" direction="0" type="0"/>
+      <Connector index="0" opcode="34" blockNumber="5" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="413"/>
+        <Point x="150" y="413"/>
+        <Point x="150" y="548"/>
+        <Point x="190" y="548"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="3" direction="0" type="0"/>
+      <Connector index="0" opcode="1" blockNumber="7" direction="1" type="0"/>
+      <Points>
+        <Point x="417" y="198"/>
+        <Point x="440" y="198"/>
+        <Point x="440" y="198"/>
+        <Point x="460" y="198"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="6" direction="0" type="0"/>
+      <Connector index="1" opcode="1" blockNumber="7" direction="1" type="0"/>
+      <Points>
+        <Point x="417" y="428"/>
+        <Point x="448" y="428"/>
+        <Point x="448" y="208"/>
+        <Point x="460" y="208"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="6" direction="0" type="0"/>
+      <Connector index="1" opcode="1" blockNumber="8" direction="1" type="0"/>
+      <Points>
+        <Point x="417" y="428"/>
+        <Point x="448" y="428"/>
+        <Point x="448" y="428"/>
+        <Point x="520" y="428"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="3" direction="0" type="0"/>
+      <Connector index="0" opcode="1" blockNumber="8" direction="1" type="0"/>
+      <Points>
+        <Point x="417" y="198"/>
+        <Point x="440" y="198"/>
+        <Point x="440" y="418"/>
+        <Point x="520" y="418"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="2" direction="0" type="0"/>
+      <Connector index="1" opcode="50" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="413"/>
+        <Point x="150" y="413"/>
+        <Point x="150" y="198"/>
+        <Point x="220" y="198"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="1" direction="0" type="0"/>
+      <Connector index="1" opcode="50" blockNumber="4" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="186"/>
+        <Point x="170" y="186"/>
+        <Point x="170" y="418"/>
+        <Point x="190" y="418"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="34" blockNumber="2" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="186"/>
+        <Point x="170" y="186"/>
+        <Point x="170" y="318"/>
+        <Point x="220" y="318"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="50" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="186"/>
+        <Point x="170" y="186"/>
+        <Point x="170" y="188"/>
+        <Point x="220" y="188"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="8" direction="0" type="0"/>
+      <Connector index="0" opcode="16777280" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="557" y="428"/>
+        <Point x="559" y="428"/>
+        <Point x="559" y="430"/>
+        <Point x="576" y="430"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="2" blockNumber="9" direction="0" type="0"/>
+      <Connector index="0" opcode="16777280" blockNumber="2" direction="1" type="0"/>
+      <Points>
+        <Point x="567" y="218"/>
+        <Point x="571" y="218"/>
+        <Point x="571" y="216"/>
+        <Point x="576" y="216"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="1" blockNumber="7" direction="0" type="0"/>
+      <Connector index="0" opcode="2" blockNumber="9" direction="1" type="0"/>
+      <Points>
+        <Point x="497" y="208"/>
+        <Point x="499" y="208"/>
+        <Point x="499" y="208"/>
+        <Point x="530" y="208"/>
+      </Points>
+    </Figure>
+    <Figure type="1" opcode="2" blockNumber="9" position="536,203"/>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="3" direction="0" type="0"/>
+      <Connector index="2" opcode="1" blockNumber="8" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="696"/>
+        <Point x="500" y="696"/>
+        <Point x="500" y="438"/>
+        <Point x="520" y="438"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="3" direction="0" type="0"/>
+      <Connector index="1" opcode="2" blockNumber="9" direction="1" type="0"/>
+      <Points>
+        <Point x="102" y="696"/>
+        <Point x="500" y="696"/>
+        <Point x="500" y="218"/>
+        <Point x="530" y="218"/>
+      </Points>
+    </Figure>
+  </Figures>
+</LOGO>

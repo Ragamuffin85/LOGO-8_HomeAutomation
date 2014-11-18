@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LOGO hardware="Logo8UDF">
+  <Properties>
+    <Creator>Ragamuffin85</Creator>
+    <Projectname></Projectname>
+    <Installationname></Installationname>
+    <Customer></Customer>
+    <Diagramno></Diagramno>
+    <Checked></Checked>
+    <Company></Company>
+    <Version>1.0.1</Version>
+    <Show>true</Show>
+    <Comments></Comments>
+    <Horizontal>1</Horizontal>
+    <Vertical>1</Vertical>
+    <History>
+      <DisplayedHistory>
+        <Date>1415990971004</Date>
+        <User>Ragamuffin85</User>
+        <Version>V8.0.0</Version>
+        <Comments></Comments>
+        <Saved>false</Saved>
+      </DisplayedHistory>
+      <DeletedHistory/>
+    </History>
+    <Zoom>100</Zoom>
+    <PageFormat>
+      <Margin>
+        <Left>28.0</Left>
+        <Top>28.0</Top>
+      </Margin>
+      <Imagesize>
+        <Height>785.0</Height>
+        <Width>538.0</Width>
+      </Imagesize>
+      <Paper>
+        <Height>842.0</Height>
+        <Width>595.0</Width>
+      </Paper>
+      <Orientation>0</Orientation>
+    </PageFormat>
+    <Password>3A9336D9EA34BA0366EB82C0C3BA7E0A5436E2F6AF6E801960DAC572BF7F3EB8</Password>
+  </Properties>
+  <UDFBlock guidValue="141599473270471" identifier="Daylight" comments="" version="1.0.1" blockNumber="0" inCounter="0" outCounter="1" validity="0">
+    <GuidList>
+      <Guid value="1415991304066" version="1.0.0"/>
+      <Guid value="141599473270471" version="1.0.1"/>
+    </GuidList>
+    <Parameter/>
+    <Blocks>
+      <Block opcode="40" blockNumber="2" name="">
+        <Parameter index="0">
+          <Protection>false</Protection>
+          <LO>E13°24'41"</LO>
+          <LA>N52°31'24"</LA>
+          <TZ max="12" min="-11" incre="1">1</TZ>
+          <TRO max="59" min="-59" incre="1">0</TRO>
+          <TSO max="59" min="-59" incre="1">0</TSO>
+          <City>Deutschland - Berlin</City>
+        </Parameter>
+      </Block>
+      <Block opcode="3" blockNumber="1">
+        <InConnector negate="false" opcode="40" blockNumber="2" index="0"/>
+      </Block>
+      <InGroup/>
+      <OutGroup>
+        <Block opcode="16777280" blockNumber="1">
+          <InConnector negate="false" opcode="3" blockNumber="1" index="0"/>
+        </Block>
+      </OutGroup>
+    </Blocks>
+  </UDFBlock>
+  <Figures>
+    <Figure type="5" position="712,79">
+      <Content type="Arial unicode" style="0" size="12" color="-16777216"></Content>
+    </Figure>
+    <Figure type="0" area="52,79,320.0,240.0">
+      <InGroup/>
+      <OutGroup>
+        <Figure type="1" opcode="16777280" blockNumber="1" position="366,123"/>
+      </OutGroup>
+    </Figure>
+    <Figure type="1" opcode="40" blockNumber="2" position="166,113"/>
+    <Figure type="1" opcode="3" blockNumber="1" position="246,113"/>
+    <Figure type="2">
+      <Connector index="0" opcode="40" blockNumber="2" direction="0" type="0"/>
+      <Connector index="0" opcode="3" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="197" y="128"/>
+        <Point x="220" y="128"/>
+        <Point x="220" y="128"/>
+        <Point x="240" y="128"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="3" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="16777280" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="277" y="128"/>
+        <Point x="358" y="128"/>
+        <Point x="358" y="126"/>
+        <Point x="360" y="126"/>
+      </Points>
+    </Figure>
+  </Figures>
+</LOGO>
