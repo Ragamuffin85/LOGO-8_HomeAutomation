@@ -1,0 +1,6 @@
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\bin\Debug\LogoRemoteControl.exe
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\bin\Debug\LogoRemoteControl.pdb
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\bin\Debug\libnodave.net.dll
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.csprojResolveAssemblyReference.cache
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.exe
+D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.pdb
