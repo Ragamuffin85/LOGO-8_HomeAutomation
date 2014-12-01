@@ -4,3 +4,8 @@ D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\b
 D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.csprojResolveAssemblyReference.cache
 D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.exe
 D:\GIT\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.pdb
+C:\Users\pstenzel.ITK\Documents\GitHub\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.exe
+C:\Users\pstenzel.ITK\Documents\GitHub\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.pdb
+C:\Users\pstenzel.ITK\Documents\GitHub\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\bin\Debug\LogoRemoteControl.exe
+C:\Users\pstenzel.ITK\Documents\GitHub\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\bin\Debug\LogoRemoteControl.pdb
+C:\Users\pstenzel.ITK\Documents\GitHub\LOGO-8_HomeAutomation\RemoteControl\LogoRemoteControl\LogoRemoteControl\obj\x86\Debug\LogoRemoteControl.csprojResolveAssemblyReference.cache

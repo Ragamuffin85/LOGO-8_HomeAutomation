@@ -27,24 +27,28 @@ using System;
 class test
 {
     static libnodave.daveOSserialType fds;
-    static libnodave.daveInterface di;
+    static libnodave.daveInterface daveI;
     static libnodave.daveConnection dc;
-    static int rack = 20;
-    static int slot = 0;
+    static const int RACK = 20;
+    static const int SLOT = 0;
+
     public static int Main(string[] args)
     {
-        int i, a = 0, j, res, b = 0, c = 0;
+        int a , b , c , res;
         float d = 0;
 
-        fds.rfd = libnodave.openSocket(102, "192.168.85.200");
+        a = b = c = res = 0;
+
+        fds.rfd = libnodave.openSocket(102, args[0]);
         fds.wfd = fds.rfd;
+
         if (fds.rfd > 0)
         {
-            di = new libnodave.daveInterface(fds, "IF1", 0, libnodave.daveProtoISOTCP, libnodave.daveSpeed187k);
-            di.setTimeout(1000000);
+            daveI = new libnodave.daveInterface(fds, "IF1", 0, libnodave.daveProtoISOTCP, libnodave.daveSpeed187k);
+            daveI.setTimeout(1000000);
             //	    res=di.initAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
             //	    if(res==0) {
-            dc = new libnodave.daveConnection(di, 0, rack, slot);
+            dc = new libnodave.daveConnection(daveI, 0, RACK, SLOT);
             int connPLC = dc.connectPLC();
             if (0 == connPLC)
             {
@@ -62,6 +66,11 @@ class test
                 }
                 else
                     Console.WriteLine("error " + res + " " + libnodave.daveStrerror(res));
+            }
+            else
+            {
+                Console.WriteLine("PLC connect failed.");
+                Console.WriteLine("Ensure that PORT 102 is not blocked by other services.");
             }
             dc.disconnectPLC();
             //	    }	    
