@@ -23,14 +23,15 @@
 */
 
 using System;
+using System.Linq;
 
 class test
 {
     static libnodave.daveOSserialType fds;
     static libnodave.daveInterface daveI;
     static libnodave.daveConnection dc;
-    static const int RACK = 20;
-    static const int SLOT = 0;
+    static int RACK = 0;
+    static int SLOT = 1;
 
     public static int Main(string[] args)
     {
@@ -39,6 +40,8 @@ class test
 
         a = b = c = res = 0;
 
+        //libnodave.daveSetDebug(libnodave.daveDebugAll);
+
         fds.rfd = libnodave.openSocket(102, args[0]);
         fds.wfd = fds.rfd;
 
@@ -46,35 +49,51 @@ class test
         {
             daveI = new libnodave.daveInterface(fds, "IF1", 0, libnodave.daveProtoISOTCP, libnodave.daveSpeed187k);
             daveI.setTimeout(1000000);
-            //	    res=di.initAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
-            //	    if(res==0) {
-            dc = new libnodave.daveConnection(daveI, 0, RACK, SLOT);
-            int connPLC = dc.connectPLC();
-            if (0 == connPLC)
-            {
-                res = dc.readBytes(libnodave.daveFlags, 0, 0, 16, null);
-                if (res == 0)
+            //res=daveI.initAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
+
+            //if(res==0) {
+                dc = new libnodave.daveConnection(daveI, 0, RACK, SLOT);
+            
+                int connPLC = dc.connectPLC();
+                if (0 == connPLC)
                 {
-                    a = dc.getS32();
-                    b = dc.getS32();
-                    c = dc.getS32();
-                    d = dc.getFloat();
-                    Console.WriteLine("FD0: " + a);
-                    Console.WriteLine("FD4: " + b);
-                    Console.WriteLine("FD8: " + c);
-                    Console.WriteLine("FD12: " + d);
+                    int byteAdress = 0;
+                    int bitNumber = 0;
+
+                    dc.writeBits(libnodave.daveDB, 1, (byteAdress * 8) + bitNumber, 1, BitConverter.GetBytes(true));
+                    System.Threading.Thread.Sleep(1000);
+                    dc.writeBits(libnodave.daveDB, 1, (byteAdress * 8) + bitNumber, 1, BitConverter.GetBytes(false));
+
+                    //dc.writeBytes(libnodave.daveFlags, 0, 0, buff.Length, buff);
+                    
+                    res = dc.readBytes(libnodave.daveDB, 0, 0, 100, null);
+
+                    if (res == 0)
+                    {
+                        for (int x = 0; x < 100; x++)
+                            Console.WriteLine(dc.getS32());
+                        /*
+                        a = dc.getS32();
+                        b = dc.getS32();
+                        c = dc.getS32();
+                        d = dc.getFloat();
+                        Console.WriteLine("FD0: " + a);
+                        Console.WriteLine("FD4: " + b);
+                        Console.WriteLine("FD8: " + c);
+                        Console.WriteLine("FD12: " + d);*/
+                    }
+                    else
+                        Console.WriteLine("error " + res + " " + libnodave.daveStrerror(res));
+                     
                 }
                 else
-                    Console.WriteLine("error " + res + " " + libnodave.daveStrerror(res));
-            }
-            else
-            {
-                Console.WriteLine("PLC connect failed.");
-                Console.WriteLine("Ensure that PORT 102 is not blocked by other services.");
-            }
-            dc.disconnectPLC();
-            //	    }	    
-            //	    di.disconnectAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
+                {
+                    Console.WriteLine("PLC connect failed.");
+                    Console.WriteLine("Ensure that PORT 102 is not blocked by other services.");
+                }
+                dc.disconnectPLC();
+            //}	    
+            daveI.disconnectAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
             libnodave.closeSocket(fds.rfd);
         }
         else
@@ -82,6 +101,7 @@ class test
             Console.WriteLine("Couldn't open TCP connaction to " + args[0]);
             return -1;
         }
+        Console.ReadKey();
         return 0;
     }
 }
