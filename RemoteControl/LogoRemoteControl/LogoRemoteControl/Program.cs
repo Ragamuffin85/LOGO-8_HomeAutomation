@@ -24,84 +24,15 @@
 
 using System;
 using System.Linq;
+using System.Windows.Forms;
 
 class test
 {
-    static libnodave.daveOSserialType fds;
-    static libnodave.daveInterface daveI;
-    static libnodave.daveConnection dc;
-    static int RACK = 0;
-    static int SLOT = 1;
-
+    [STAThread]
     public static int Main(string[] args)
     {
-        int a , b , c , res;
-        float d = 0;
-
-        a = b = c = res = 0;
-
-        //libnodave.daveSetDebug(libnodave.daveDebugAll);
-
-        fds.rfd = libnodave.openSocket(102, args[0]);
-        fds.wfd = fds.rfd;
-
-        if (fds.rfd > 0)
-        {
-            daveI = new libnodave.daveInterface(fds, "IF1", 0, libnodave.daveProtoISOTCP, libnodave.daveSpeed187k);
-            daveI.setTimeout(1000000);
-            //res=daveI.initAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
-
-            //if(res==0) {
-                dc = new libnodave.daveConnection(daveI, 0, RACK, SLOT);
-            
-                int connPLC = dc.connectPLC();
-                if (0 == connPLC)
-                {
-                    int byteAdress = 0;
-                    int bitNumber = 0;
-
-                    dc.writeBits(libnodave.daveDB, 1, (byteAdress * 8) + bitNumber, 1, BitConverter.GetBytes(true));
-                    System.Threading.Thread.Sleep(1000);
-                    dc.writeBits(libnodave.daveDB, 1, (byteAdress * 8) + bitNumber, 1, BitConverter.GetBytes(false));
-
-                    //dc.writeBytes(libnodave.daveFlags, 0, 0, buff.Length, buff);
-                    
-                    res = dc.readBytes(libnodave.daveDB, 0, 0, 100, null);
-
-                    if (res == 0)
-                    {
-                        for (int x = 0; x < 100; x++)
-                            Console.WriteLine(dc.getS32());
-                        /*
-                        a = dc.getS32();
-                        b = dc.getS32();
-                        c = dc.getS32();
-                        d = dc.getFloat();
-                        Console.WriteLine("FD0: " + a);
-                        Console.WriteLine("FD4: " + b);
-                        Console.WriteLine("FD8: " + c);
-                        Console.WriteLine("FD12: " + d);*/
-                    }
-                    else
-                        Console.WriteLine("error " + res + " " + libnodave.daveStrerror(res));
-                     
-                }
-                else
-                {
-                    Console.WriteLine("PLC connect failed.");
-                    Console.WriteLine("Ensure that PORT 102 is not blocked by other services.");
-                }
-                dc.disconnectPLC();
-            //}	    
-            daveI.disconnectAdapter();	// does nothing in ISO_TCP. But call it to keep your programs indpendent of protocols
-            libnodave.closeSocket(fds.rfd);
-        }
-        else
-        {
-            Console.WriteLine("Couldn't open TCP connaction to " + args[0]);
-            return -1;
-        }
-        Console.ReadKey();
+        Application.EnableVisualStyles();
+        Application.Run(new LogoRemoteControl.LogoSimpleControl() );
         return 0;
     }
 }
