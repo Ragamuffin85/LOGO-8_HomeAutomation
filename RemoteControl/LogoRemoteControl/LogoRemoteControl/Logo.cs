@@ -87,6 +87,10 @@ namespace LogoRemoteControl
             return false;
         }
 
+        public void ReadAll()
+        {
+        }
+
         public static Logo Instance(string IP)
         {
             if (__LogoInstance == null)
