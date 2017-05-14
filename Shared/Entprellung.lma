@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LOGO hardware="Logo8UDF">
+  <Properties>
+    <Creator>Ragamuffin85</Creator>
+    <Projectname></Projectname>
+    <Installationname></Installationname>
+    <Customer></Customer>
+    <Diagramno></Diagramno>
+    <Checked></Checked>
+    <Company></Company>
+    <Version>1.0.2</Version>
+    <Show>true</Show>
+    <Comments></Comments>
+    <Horizontal>1</Horizontal>
+    <Vertical>1</Vertical>
+    <History>
+      <DisplayedHistory>
+        <Date>1454355197758</Date>
+        <User>Ragamuffin85</User>
+        <Version>V8.0.0</Version>
+        <Comments></Comments>
+        <Saved>false</Saved>
+      </DisplayedHistory>
+      <DeletedHistory/>
+    </History>
+    <Zoom>100</Zoom>
+    <PageFormat>
+      <Margin>
+        <Left>28.0</Left>
+        <Top>28.0</Top>
+      </Margin>
+      <Imagesize>
+        <Height>785.0</Height>
+        <Width>538.0</Width>
+      </Imagesize>
+      <Paper>
+        <Height>842.0</Height>
+        <Width>595.0</Width>
+      </Paper>
+      <Orientation>0</Orientation>
+    </PageFormat>
+    <Password>984CAB0DD3BFE8688C9D72C20664388B7FD8123BCD37A60EA3B59E9A9EA8A6EE</Password>
+  </Properties>
+  <UDFBlock guidValue="145435606720940" identifier="Entprell" comments="" version="1.0.2" blockNumber="0" inCounter="1" outCounter="1" validity="0">
+    <GuidList>
+      <Guid value="1454355326067" version="1.0.0"/>
+      <Guid value="145435571168021" version="1.0.1"/>
+      <Guid value="145435606720940" version="1.0.2"/>
+    </GuidList>
+    <Parameter/>
+    <Blocks>
+      <Block opcode="33" blockNumber="1" name="">
+        <InConnector negate="false" opcode="16777216" blockNumber="1" index="0"/>
+        <Parameter index="1">
+          <Protection>false</Protection>
+          <T isReference="false" lowMin="0" lowMax="999" highMin="0" highMax="99">16386</T>
+          <Rem>false</Rem>
+        </Parameter>
+      </Block>
+      <InGroup>
+        <Block opcode="16777216" blockNumber="1" name="EINGANG"/>
+      </InGroup>
+      <OutGroup>
+        <Block opcode="16777280" blockNumber="1" name="ENTPRELLT">
+          <InConnector negate="false" opcode="33" blockNumber="1" index="0"/>
+        </Block>
+      </OutGroup>
+    </Blocks>
+  </UDFBlock>
+  <Figures>
+    <Figure type="5" position="712,79">
+      <Content type="Dialog" style="0" size="36" color="-16777216"></Content>
+    </Figure>
+    <Figure type="0" area="52,79,320.0,240.0">
+      <InGroup>
+        <Figure type="1" opcode="16777216" blockNumber="1" position="46,188"/>
+      </InGroup>
+      <OutGroup>
+        <Figure type="1" opcode="16777280" blockNumber="1" position="366,202"/>
+      </OutGroup>
+    </Figure>
+    <Figure type="1" opcode="33" blockNumber="1" position="156,183" boxShowState="false"/>
+    <Figure type="2">
+      <Connector index="0" opcode="16777216" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="33" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="64" y="191"/>
+        <Point x="110" y="191"/>
+        <Point x="110" y="188"/>
+        <Point x="150" y="188"/>
+      </Points>
+    </Figure>
+    <Figure type="2">
+      <Connector index="0" opcode="33" blockNumber="1" direction="0" type="0"/>
+      <Connector index="0" opcode="16777280" blockNumber="1" direction="1" type="0"/>
+      <Points>
+        <Point x="187" y="198"/>
+        <Point x="280" y="198"/>
+        <Point x="280" y="205"/>
+        <Point x="360" y="205"/>
+      </Points>
+    </Figure>
+  </Figures>
+</LOGO>

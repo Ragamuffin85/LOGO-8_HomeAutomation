@@ -33,6 +33,7 @@
             this._byteAdress = new System.Windows.Forms.NumericUpDown();
             this._bitAdress = new System.Windows.Forms.NumericUpDown();
             this._bitAdressLabel = new System.Windows.Forms.Label();
+            this._Elements = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this._byteAdress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._bitAdress)).BeginInit();
             this.SuspendLayout();
@@ -79,11 +80,20 @@
             this._bitAdressLabel.TabIndex = 5;
             this._bitAdressLabel.Text = "Bit";
             // 
+            // _Elements
+            // 
+            this._Elements.FormattingEnabled = true;
+            this._Elements.Location = new System.Drawing.Point(278, 12);
+            this._Elements.Name = "_Elements";
+            this._Elements.Size = new System.Drawing.Size(426, 229);
+            this._Elements.TabIndex = 6;
+            // 
             // LogoSimpleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 95);
+            this.ClientSize = new System.Drawing.Size(716, 257);
+            this.Controls.Add(this._Elements);
             this.Controls.Add(this._bitAdressLabel);
             this.Controls.Add(this._bitAdress);
             this.Controls.Add(this._byteAdress);
@@ -105,6 +115,7 @@
         private System.Windows.Forms.NumericUpDown _byteAdress;
         private System.Windows.Forms.NumericUpDown _bitAdress;
         private System.Windows.Forms.Label _bitAdressLabel;
+        private System.Windows.Forms.CheckedListBox _Elements;
 
     }
 }

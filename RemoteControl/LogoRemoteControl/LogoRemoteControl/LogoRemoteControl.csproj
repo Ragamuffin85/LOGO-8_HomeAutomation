@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component.cs" />
     <Compile Include="Logo.cs" />
     <Compile Include="LogoSimpleControl.cs">
       <SubType>Form</SubType>
